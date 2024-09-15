@@ -14,7 +14,8 @@
     <button onclick="makeRed()">Make Red</button>
     <button id="slate-blue">Make Slate Blue</button>
     <button id="make-blue">Make Blue</button>
-
+    <button id="make-crimson">Make Crimson</button>
+    <button id="make-orange">Make Orange</button>
 
 
 
@@ -36,6 +37,15 @@
         slateBlue.onclick = function slateBlueBtn(){
             document.body.style.backgroundColor = 'slateblue'
         }
+
+        const makeCrimson = document.getElementById('make-crimson');
+        makeCrimson.addEventListener('click', makeCrimsonBg);
+        function makeCrimsonBg(){
+            document.body.style.backgroundColor = 'crimson'
+        }
+        document.getElementById('make-orange').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'orange'
+        })
     </script>
 </body>
 </html>
