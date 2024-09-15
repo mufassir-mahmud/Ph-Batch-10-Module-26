@@ -6,10 +6,14 @@
     <title>DOM Special Events</title>
 </head>
 <body>
-    <h1 onclick="console.log('I am Click');">DOM - Document Object Model</h1>
+    <h1 onclick="console.log('I am Click');" >DOM - Document Object Model</h1>
 
     <button onclick="console.log(9);">Click ME</button>
     <button onclick="console.log(69);">Another</button>
+    <button onclick="document.body.style.backgroundColor = 'yellow'">Make Yellow</button>
+    <button onclick="makeRed()">Make Red</button>
+    <button id="slate-blue">Make Slate Blue</button>
+    <button id="make-blue">Make Blue</button>
 
 
 
@@ -17,5 +21,21 @@
 
 
     <script src="script.js"></script>
+    <script>
+        function makeRed(){
+            document.body.style.backgroundColor = 'red';
+        }
+
+        const blueBtn = document.getElementById('make-blue');
+        blueBtn.onclick = makeBlue
+
+        function makeBlue(){
+            document.body.style.backgroundColor = 'Blue'
+        }
+        const slateBlue = document.getElementById('slate-blue');
+        slateBlue.onclick = function slateBlueBtn(){
+            document.body.style.backgroundColor = 'slateblue'
+        }
+    </script>
 </body>
 </html>
