@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="event-heading">Event Handler Summary </h1>
+    <button onclick="EventHandler()">Event Handler</button>
+    <button id="add-event">Add Event Listener</button>
+
+
+
+    <script>
+        function EventHandler(){
+          const eventHEading =  document.getElementById('event-heading');
+          eventHEading.innerText = 'Text already Changed'
+        }
+        document.getElementById('add-event').addEventListener('click' , function(){
+            const eventHEading =  document.getElementById('event-heading');
+          eventHEading.innerText = 'Add Event Text already Changed'
+        })
+    </script>
+</body>
+</html>

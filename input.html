@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        h3{
+            display: inline;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3 id="default-text">Default Input Text</h3>  
+    <h3 id="user-text">User Password</h3> <br>
+    <input id="input-text" type="text" name="" id=""> 
+    <input id="submit-btn" type="submit" value="Update">
+    <input id="user-pass" type="password" name="" id="">
+    <input id="save-btn" type="submit" value="Save">
+
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function(){
+            const inputText = document.getElementById('input-text');
+            const deafultText = document.getElementById('default-text');
+            deafultText.innerText = inputText.value;
+            inputText.value = '';
+        })
+
+        document.getElementById('save-btn').addEventListener('click', function(){
+            const userPass = document.getElementById('user-pass');
+            const userText = document.getElementById('user-text');
+            userText.innerText = userPass.value;
+            userPass.value = '';
+        })
+    </script>
+</body>
+</html>
